@@ -3,11 +3,11 @@ This project uses tensorflow's speech commands model to understand users words a
 
 ## Pretrained model
 A model was trained using [google's trainable machine](https://teachablemachine.withgoogle.com/train)
-The model recognizes the followiing lables
-    - Background Noise
-    - Greetings: Responds to greetings
-    - Play a Song: Tells a user the recommended songs for the day
-    - Weather: Tells the user the current weather
+The model recognizes the followiing lables:
+    1. Background Noise
+    1. Greetings: Responds to greetings
+    1. Play a Song: Tells a user the recommended songs for the day
+    1. Weather: Tells the user the current weather
 The actual functionality for this has not been included but the browser responds using SpeechSynthesisUtterance function to convert text to speech.
 
 ### Voice Assistant
