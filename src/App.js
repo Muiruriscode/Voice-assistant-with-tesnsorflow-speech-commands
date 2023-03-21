@@ -18,7 +18,6 @@ function App() {
   const loadModel = async () => {
     try {
       const recognizer = await speech.create('BROWSER_FFT', undefined, VoiceModel, VoiceModelMetadata)
-      console.log('loaded model')
       await recognizer.ensureModelLoaded()
       setModel(recognizer)
       setLabels(recognizer.wordLabels()) 
@@ -39,7 +38,6 @@ function App() {
   }
 
   const recognizeCommands = async () => {
-    console.log('listening for commands')
     model.listen(result => {
       console.log(labels[argMax(Object.values(result.scores))])
       setAction(labels[argMax(Object.values(result.scores))])
@@ -66,11 +64,11 @@ function App() {
       <button id="start-btn" className="simple-btn"  onClick={recognizeCommands}>Start Assistant</button>
     </div>
       <Visualizer />
-      {action ? <div>{action}</div>: <div>No action detected</div>}
+      {/* {action ? <div>{action}</div>: <div>No action detected</div>} */}
       {action === "Weather"? speak("The weather today is sunny at 27 decgrees"): 
           action === "Greetings"? speak("Hello Dennis. How have you been?"): 
           action === "Play a Song" ? speak("Here are songs that I recomend for today."): 
-          <p>Continue</p>}
+          <p>Say something</p>}
     </div>
   );
 }

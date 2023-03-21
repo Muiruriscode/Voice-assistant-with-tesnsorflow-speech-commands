@@ -31,17 +31,15 @@ const Visualizer = () => {
     startVisualization();
   }, [audioStream]);
 
-  function stopVisualization() {
-    audioStream?.getTracks().forEach((track) => {
-      track.stop();
-    });
-  }
+  // function stopVisualization() {
+  //   audioStream?.getTracks().forEach((track) => {
+  //     track.stop();
+  //   });
+  // }
 
   return (
     <div id="visualizer-container">
       <canvas id="output" width="250" height="200" ref={audioRef}></canvas>
-      <h2 id="word-preview"></h2>
-      <h3 id="search-result"></h3>
     </div>
   );
 };
