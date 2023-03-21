@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 
 import * as tf from '@tensorflow/tfjs'
@@ -68,7 +67,7 @@ function App() {
       {action === "Weather"? speak("The weather today is sunny at 27 decgrees"): 
           action === "Greetings"? speak("Hello Dennis. How have you been?"): 
           action === "Play a Song" ? speak("Here are songs that I recomend for today."): 
-          <p>Say something</p>}
+          <p>Click the button and say something</p>}
     </div>
   );
 }

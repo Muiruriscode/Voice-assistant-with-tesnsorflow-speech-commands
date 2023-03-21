@@ -2,13 +2,16 @@
 This project uses tensorflow's speech commands model to understand users words and predict the actions that a user intends on performing. For enhanced user experince, wave visualizer library is used to show waveforms of sounds in the surrounding environment.
 
 ## Pretrained model
-A model was trained using ![google's trainable machine](https://teachablemachine.withgoogle.com/train)
+A model was trained using [google's trainable machine](https://teachablemachine.withgoogle.com/train)
 The model recognizes the followiing lables
-    -Background Noise
-    -Greetings: Responds to greetings
-    -Play a Song: Tells a user the recommended songs for the day
-    -Weather: Tells the user the current weather
+    - Background Noise
+    - Greetings: Responds to greetings
+    - Play a Song: Tells a user the recommended songs for the day
+    - Weather: Tells the user the current weather
 The actual functionality for this has not been included but the browser responds using SpeechSynthesisUtterance function to convert text to speech.
+
+### Voice Assistant
+![Voice assistant](./public/voice.png)
 
 ## Imports
 ```js
